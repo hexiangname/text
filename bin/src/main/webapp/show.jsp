@@ -8,11 +8,6 @@
 </head>
 <body>
 <h1>欢迎用户${stu.name}</h1>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
 登录成功
 </body>
 </html>

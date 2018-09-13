@@ -15,6 +15,5 @@
 </form>
 
 <a href="reg.jsp">注册</a>
-
 </body>
 </html>

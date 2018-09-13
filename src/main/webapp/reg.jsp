@@ -34,7 +34,7 @@
 
 
 <div style="margin-left: 165px;margin-top: 50px">
-	<form method="post" name="regform" onSubmit="return checkUserInfo()" action="/back/student/reg.action">
+	<form method="post" name="regform" onSubmit="return checkUserInfo()" action="reg.action">
 		<input type="hidden" name="op" value="reg">
 		用户名:<input type="text" name="name"><br> 
 		密&nbsp;码:<input type="text" name="pwd"><br> 

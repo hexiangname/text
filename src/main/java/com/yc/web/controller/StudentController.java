@@ -33,7 +33,7 @@ public class StudentController {
 		}
 	}
 	
-	@RequestMapping(value="/reg.action",method = RequestMethod.POST)
+	@RequestMapping(value="reg.action",method = RequestMethod.POST)
 	public @ResponseBody String reg(String name,String pwd){
 		Student student = new Student();
 		student.setName(name);
