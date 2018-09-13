@@ -34,7 +34,7 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="typeAliasesPackage" value="com.yc.bean"></property>
-		<property name="mapperLocations" value="classpath*:com/yc/dao/*.xml" />
+		<property name="mapperLocations" value="classpath*:com/yc/mapper/*.xml" />
 		<!-- 主要用来配置mybatis中的 configuration中的settings配置 -->
 		<property name="configurationProperties">
 			<props>

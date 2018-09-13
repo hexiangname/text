@@ -4,17 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>登录</title>
+<title>登录失败</title>
 </head>
 <body>
-<form action="loginstu.action" method="post">
-
-用户名:<input type="text" name="name" />
-密码:<input type="password" name="pwd">
-<input type="submit" value="登录"/>
-</form>
-
-<a href=""></a>
-
+<h2>登录失败,用户名密码错误</h2>
+<a href="index.jsp">返回登录</a>
 </body>
 </html>

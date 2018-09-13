@@ -1,5 +1,7 @@
 package com.yc.biz.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -30,6 +32,20 @@ public class StudentBizImpl implements StudentBiz{
 	public int reg(Student st) {
 		int i = this.baseDao.add(st, "reg");
 		return i;
+	}
+
+	/**
+	 * 登录
+	 */
+	@Override
+	public Student selectStu(Student st) {
+		List<Student> list=this.baseDao.findAll(st, "selectStu");
+		if(list!=null&&list.size()<0){
+			return list.get(0);
+		}else{
+			return null;
+		}
+		
 	}
 
 }

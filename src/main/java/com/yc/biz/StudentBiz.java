@@ -17,4 +17,12 @@ public interface StudentBiz {
 	 * @return
 	 */
 	int reg(Student st);
+	
+	/**
+	 * 胡超结
+	 * 登录
+	 * @param st
+	 * @return
+	 */
+	Student selectStu(Student st);
 }

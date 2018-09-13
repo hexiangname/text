@@ -27,6 +27,10 @@ public class Student {
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
 	}
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", pwd=" + pwd + "]";
+	}
 	
 	
 }
