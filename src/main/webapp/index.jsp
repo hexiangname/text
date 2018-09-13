@@ -14,7 +14,7 @@
 <input type="submit" value="登录"/>
 </form>
 
-<a href=""></a>
+<a href="reg.jsp"></a>
 
 </body>
 </html>

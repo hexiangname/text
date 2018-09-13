@@ -40,7 +40,7 @@ public class StudentBizImpl implements StudentBiz{
 	@Override
 	public Student selectStu(Student st) {
 		List<Student> list=this.baseDao.findAll(st, "selectStu");
-		if(list!=null&&list.size()<0){
+		if(list!=null&&list.size()>0){
 			return list.get(0);
 		}else{
 			return null;
