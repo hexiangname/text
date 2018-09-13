@@ -5,16 +5,6 @@
 		<param-value>classpath:beans.xml</param-value>
 	</context-param>
 
-	<!-- 过滤器 CharacteFilter -->
-	<filter>
-		<filter-name>characteFilter</filter-name>
-		<filter-class>com.yc.mooc.filters.CharacteFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>characteFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
-
 
 	<!--配置由Spring 提供的针对中文乱码的编码过滤器 -->
 	<!-- 编码过滤器 -->
@@ -31,18 +21,6 @@
 		<filter-name>CharacterEncodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-
-	<!-- 过滤器 -->
-	<filter>
-		<filter-name>sessionFilter</filter-name>
-		<filter-class>com.yc.mooc.filters.CheckLoginFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>sessionFilter</filter-name>
-		<url-pattern>/play.action</url-pattern>
-	</filter-mapping>
->>>>>>> branch 'master' of git@github.com:hexiangname/text.git
-
 
 
 	<!--Spring核心监听器 -->

@@ -16,17 +16,17 @@ import com.yc.biz.StudentBiz;
  *
  */
 @Controller
-@RequestMapping("back/student")
+//@RequestMapping("back/student")
 public class StudentControllers {
 	@Resource(name="studentBizImpl")
 	private StudentBiz studentBiz;
 	
-	@RequestMapping(value="/reg.action",method = RequestMethod.POST)
+	/*@RequestMapping(value="/reg.action",method = RequestMethod.POST)
 	public @ResponseBody String reg(String name,String pwd){
 		Student student = new Student();
 		student.setName(name);
 		student.setPwd(pwd);
 		int result = studentBiz.reg(student);
 		return String.valueOf(result);
-	}
+	}*/
 }
