@@ -1,6 +1,7 @@
 package com.yc.web.controller;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -13,28 +14,46 @@ import com.yc.biz.StudentBiz;
 
 @Controller
 public class StudentController {
-	
-	@Resource(name="studentBizImpl")
+
+	@Resource(name = "studentBizImpl")
 	private StudentBiz studentBiz;
 
-    /**
-     * 登录	
-     * @param stu 用户
-     * @return
-     */
-	@RequestMapping(value="loginstu.action",method=RequestMethod.POST)
-	public String reg(Student stu,HttpSession session){
-		stu=studentBiz.selectStu(stu);
-		if(stu!=null&&!"".equals(stu)){
-			session.setAttribute("stu", stu);
-			return "show";
-		}else{
-			return "erro";
+	/**
+	 * 登录
+	 * 胡超结
+	 * @param stu
+	 *            用户
+	 * @return
+	 */
+	@RequestMapping(value = "loginstu.action", method = RequestMethod.POST)
+	public String reg(Student stu, HttpSession session, HttpServletRequest req) {
+		String valcode = req.getParameter("valcode");
+		String rand = (String)session.getAttribute("rand");
+		System.out.println(stu);
+		if (valcode.equals(rand)) {
+			stu = studentBiz.selectStu(stu);
+			System.out.println(stu);
+			if (stu != null && !"".equals(stu)) {
+				session.setAttribute("stu", stu);
+				return "show";
+			}else{
+				return "erro";
+			}
+		} else {
+			return "index";
 		}
+		
 	}
-	
-	@RequestMapping(value="reg.action",method = RequestMethod.POST)
-	public @ResponseBody String reg(String name,String pwd){
+
+	/**
+	 * 注册
+	 * 何翔
+	 * @param name
+	 * @param pwd
+	 * @return
+	 */
+	@RequestMapping(value = "reg.action", method = RequestMethod.POST)
+	public @ResponseBody String reg(String name, String pwd) {
 		Student student = new Student();
 		student.setName(name);
 		student.setPwd(pwd);
