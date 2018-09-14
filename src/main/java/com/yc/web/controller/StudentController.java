@@ -42,12 +42,11 @@ public class StudentController {
 		} else {
 			return "index";
 		}
-		
 	}
 
 	/**
-	 * 注册
-	 * 何翔
+	 * 注册 何翔
+	 * 
 	 * @param name
 	 * @param pwd
 	 * @return
