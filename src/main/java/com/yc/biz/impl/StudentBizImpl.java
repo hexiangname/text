@@ -1,5 +1,6 @@
 package com.yc.biz.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -30,6 +31,7 @@ public class StudentBizImpl implements StudentBiz{
 	 */
 	@Override
 	public int reg(Student st) {
+		System.out.println("用户名:"+st.getName()+"  时间"+new Date());
 		int i = this.baseDao.add(st, "reg");
 		return i;
 	}

@@ -23,7 +23,7 @@ public class StudentController {
      * @return
      */
 	@RequestMapping(value="loginstu.action",method=RequestMethod.POST)
-	public String reg(Student stu,HttpSession session){
+	public String login(Student stu,HttpSession session){
 		stu=studentBiz.selectStu(stu);
 		if(stu!=null&&!"".equals(stu)){
 			session.setAttribute("stu", stu);
